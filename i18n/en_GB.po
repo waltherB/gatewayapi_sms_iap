@@ -1,9 +1,3 @@
-# GatewayAPI SMS IAP British English Translation
-
-This file contains the British English translation (.po) for the GatewayAPI SMS IAP module.
-
-```
-# Translation of Odoo Server.
 # This file contains the British English translation of the GatewayAPI SMS IAP module.
 #
 msgid ""
