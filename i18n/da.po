@@ -1,22 +1,85 @@
-# Translation of Odoo Module.
-# Based on gatewayapi_sms_iap.pot
+# GatewayAPI SMS IAP Danish Translation
+
+This file contains the updated Danish translation (.po) for the GatewayAPI SMS IAP module.
+
+```
+# Translation of Odoo Server.
+# This file contains the Danish translation of the GatewayAPI SMS IAP module.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-28 15:00+0000\n" # Should match .pot
-"PO-Revision-Date: 2023-10-28 15:05+0000\n" # Your translation date
-"Last-Translator: Your Name <you@example.com>\n"
-"Language-Team: Danish <da@li.org>\n"
-"Language: da\n"
+"POT-Creation-Date: 2025-05-14 12:00+0000\n"
+"PO-Revision-Date: 2025-05-14 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: gatewayapi_sms_iap
-#: model:ir.model.fields,field_description:gatewayapi_sms_iap.field_iap_alternative_provider__gatewayapi_account_name
-msgid "GatewayAPI Account Label"
-msgstr "GatewayAPI Kontonavn"
+#: model:ir.model,name:gatewayapi_sms_iap.model_gatewayapi_sms_provider
+msgid "GatewayAPI SMS Provider"
+msgstr "GatewayAPI SMS Udbyder"
 
-# ... (Add actual translations here once .pot is properly generated)
+#. module: gatewayapi_sms_iap
+#: model:ir.model.fields,field_description:gatewayapi_sms_iap.field_sms_provider__provider_type
+msgid "Provider Type"
+msgstr "Udbyder Type"
+
+#. module: gatewayapi_sms_iap
+#: model:ir.model.fields,field_description:gatewayapi_sms_iap.field_sms_provider__gatewayapi_api_key
+msgid "GatewayAPI Key"
+msgstr "GatewayAPI Nøgle"
+
+#. module: gatewayapi_sms_iap
+#: model:ir.model.fields,help:gatewayapi_sms_iap.field_sms_provider__gatewayapi_api_key
+msgid "API Key for GatewayAPI SMS service"
+msgstr "API Nøgle til GatewayAPI SMS tjeneste"
+
+#. module: gatewayapi_sms_iap
+#: model:ir.model.fields,field_description:gatewayapi_sms_iap.field_sms_provider__gatewayapi_sender
+msgid "Sender Name"
+msgstr "Afsendernavn"
+
+#. module: gatewayapi_sms_iap
+#: model:ir.model.fields,help:gatewayapi_sms_iap.field_sms_provider__gatewayapi_sender
+msgid "Sender name or number for GatewayAPI SMS"
+msgstr "Afsendernavn eller nummer til GatewayAPI SMS"
+
+#. module: gatewayapi_sms_iap
+#: model:ir.model.fields.selection,name:gatewayapi_sms_iap.selection__sms_provider__provider_type__gatewayapi
+msgid "GatewayAPI"
+msgstr "GatewayAPI"
+
+#. module: gatewayapi_sms_iap
+#: model:ir.model,name:gatewayapi_sms_iap.model_sms_provider
+msgid "SMS Provider"
+msgstr "SMS Udbyder"
+
+#. module: gatewayapi_sms_iap
+#: model_terms:ir.ui.view,arch_db:gatewayapi_sms_iap.gatewayapi_form_view
+msgid "GatewayAPI Configuration"
+msgstr "GatewayAPI Konfiguration"
+
+#. module: gatewayapi_sms_iap
+#: code:addons/gatewayapi_sms_iap/models/gatewayapi_sms.py:0
+#, python-format
+msgid "Invalid API Key format"
+msgstr "Ugyldigt API-nøgleformat"
+
+#. module: gatewayapi_sms_iap
+#: code:addons/gatewayapi_sms_iap/models/gatewayapi_sms.py:0
+#, python-format
+msgid "SMS sending failed: %s"
+msgstr "SMS afsendelse mislykkedes: %s"
+
+#. module: gatewayapi_sms_iap
+#: code:addons/gatewayapi_sms_iap/models/gatewayapi_sms.py:0
+#, python-format
+msgid "SMS successfully sent via GatewayAPI"
+msgstr "SMS sendt med succes via GatewayAPI"
+```
