@@ -1,0 +1,193 @@
+<section class="oe_container oe_spaced">
+    <h2 class="oe_slogan" style="color:#875A7B;">GatewayAPI SMS Connector for Odoo 17</h2>
+    <h3 class="oe_slogan">Send SMS via GatewayAPI.eu using IAP Alternative Provider</h3>
+    <div class="oe_span12">
+        <div class="oe_demo oe_picture oe_screenshot">
+            <img src="banner.png" alt="GatewayAPI SMS Connector Banner" style="max-width: 100%; margin-bottom: 20px;">
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_spaced">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Overview</h2>
+        <div class="oe_span12">
+            <p class="oe_mt32 text-justify">
+                Integrate your Odoo 17 instance with <a href="https://gatewayapi.eu" target="_blank">GatewayAPI.eu</a>,
+                a reliable and feature-rich SMS gateway. This module leverages the robust
+                <a href="https://github.com/OCA/server-tools/tree/17.0/iap_alternative_provider" target="_blank">IAP Alternative Provider</a>
+                framework from the Odoo Community Association (OCA), ensuring a stable and extensible solution for your SMS needs.
+            </p>
+            <p class="oe_mt32 text-justify">
+                Send SMS notifications, marketing messages, and alerts directly from Odoo, with support for emojis,
+                automated balance checks, and low credit warnings.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_spaced">
+    <h2 class="oe_slogan" style="color:#875A7B;">Key Features</h2>
+    <div class="oe_row">
+        <div class="oe_span6">
+            <div class="oe_feature_box">
+                <div class="oe_feature_icon" style="padding-top:10px;">
+                    <i class="fa fa-cogs" style="font-size: 50px;"></i>
+                </div>
+                <h3 class="oe_feature_title">Easy Configuration</h3>
+                <p class="oe_mb32 oe_text_gray">Securely set up your GatewayAPI credentials within Odoo's familiar interface. Default URL pre-configured to <code>https://gatewayapi.eu</code>.</p>
+            </div>
+            <div class="oe_feature_box">
+                <div class="oe_feature_icon" style="padding-top:10px;">
+                    <i class="fa fa-smile-o" style="font-size: 50px;"></i>
+                </div>
+                <h3 class="oe_feature_title">Emoji Support (UCS-2)</h3>
+                <p class="oe_mb32 oe_text_gray">Messages containing emojis or special characters are automatically detected and sent using UCS-2 encoding.</p>
+            </div>
+            <div class="oe_feature_box">
+                <div class="oe_feature_icon" style="padding-top:10px;">
+                    <i class="fa fa-shield" style="font-size: 50px;"></i>
+                </div>
+                <h3 class="oe_feature_title">Secure Token Handling</h3>
+                <p class="oe_mb32 oe_text_gray">API Token field includes a show/hide toggle for enhanced security during configuration.</p>
+            </div>
+        </div>
+        <div class="oe_span6">
+            <div class="oe_feature_box">
+                <div class="oe_feature_icon" style="padding-top:10px;">
+                    <i class="fa fa-credit-card" style="font-size: 50px;"></i>
+                </div>
+                <h3 class="oe_feature_title">Balance Check & Alerts</h3>
+                <p class="oe_mb32 oe_text_gray">Test your connection, view current GatewayAPI credits, and set up automated checks with low credit notifications via Odoo's messaging system.</p>
+            </div>
+            <div class="oe_feature_box">
+                <div class="oe_feature_icon" style="padding-top:10px;">
+                    <i class="fa fa-plug" style="font-size: 50px;"></i>
+                </div>
+                <h3 class="oe_feature_title">IAP Alternative Provider</h3>
+                <p class="oe_mb32 oe_text_gray">Built upon the flexible <a href="https://github.com/OCA/server-tools/tree/17.0/iap_alternative_provider" target="_blank">IAP Alternative Provider</a> (OCA) module for future-proof integration.</p>
+            </div>
+            <div class="oe_feature_box">
+                <div class="oe_feature_icon" style="padding-top:10px;">
+                    <i class="fa fa-language" style="font-size: 50px;"></i>
+                </div>
+                <h3 class="oe_feature_title">Multi-Language</h3>
+                <p class="oe_mb32 oe_text_gray">Includes initial translations for English and Danish. Easily extendable for other languages.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_spaced">
+    <h2 class="oe_slogan" style="color:#875A7B;">Prerequisites</h2>
+    <div class="oe_span12">
+        <p class="oe_mt32">
+            This module depends on the <strong><code>iap_alternative_provider</code></strong> module from the Odoo Community Association (OCA).
+            You must install this module first. You can find it in the OCA `server-tools` repository:
+            <a href="https://github.com/OCA/server-tools/tree/17.0/iap_alternative_provider" target="_blank">
+                https://github.com/OCA/server-tools/tree/17.0/iap_alternative_provider
+            </a>
+        </p>
+        <p>Ensure this OCA module is added to your Odoo addons path and installed before installing the GatewayAPI SMS Connector.</p>
+    </div>
+</section>
+
+<section class="oe_container oe_spaced">
+    <h2 class="oe_slogan" style="color:#875A7B;">Installation & Configuration</h2>
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <ol class="oe_mt32">
+                <li>Ensure the <strong><code>iap_alternative_provider</code></strong> (OCA) module is installed.</li>
+                <li>Install the "GatewayAPI SMS Connector (IAP Alternative)" module.</li>
+                <li>
+                    Navigate to <strong>Settings » Technical » Alternative Providers</strong>.
+                     <div class="oe_demo oe_picture oe_screenshot" style="margin-top:15px; margin-bottom:15px;">
+                        <img src="images/placeholder.png" alt="Navigate to Alternative Providers menu" style="max-width: 90%; border: 1px solid #ddd;">
+                        <p style="text-align:center; font-style:italic;">(Screenshot: Navigating to Alternative Providers menu - Replace with your actual screenshot)</p>
+                    </div>
+                </li>
+                <li>Click "Create" to add a new alternative provider configuration:
+                    <ul>
+                        <li><strong>Name:</strong> E.g., "GatewayAPI Main Account".</li>
+                        <li><strong>Provider:</strong> Select "GatewayAPI" from the dropdown.</li>
+                        <li><strong>GatewayAPI Account Label:</strong> A friendly name for this configuration.</li>
+                        <li><strong>GatewayAPI Base URL:</strong> Defaults to <code>https://gatewayapi.eu</code>. Change if needed.</li>
+                        <li><strong>Default Sender Name:</strong> Your desired SMS sender ID (alphanumeric or numeric, as per GatewayAPI rules).</li>
+                        <li><strong>API Token:</strong> Your API token from your GatewayAPI.eu dashboard. Use the eye icon to show/hide.</li>
+                        <li><strong>Available for services:</strong> Select "sms".</li>
+                    </ul>
+                    <div class="oe_demo oe_picture oe_screenshot" style="margin-top:15px; margin-bottom:15px;">
+                        <img src="images/placeholder.png" alt="GatewayAPI Provider Configuration" style="max-width: 90%; border: 1px solid #ddd;">
+                        <p style="text-align:center; font-style:italic;">(Screenshot: Configuring the GatewayAPI Provider - Replace with your actual screenshot)</p>
+                    </div>
+                </li>
+                <li>Click <strong>"Check Credentials"</strong> to test your API token and view your current GatewayAPI balance.</li>
+                <li>(Optional) Configure "Automated Balance Check & Notifications":
+                    <ul>
+                        <li>Enable balance checks.</li>
+                        <li>Set a minimum credit limit for alerts.</li>
+                        <li>Define the check interval.</li>
+                        <li>Select a notification channel or users to receive alerts.</li>
+                    </ul>
+                </li>
+                <li>Save the Alternative Provider record.</li>
+                <li>
+                    Navigate to <strong>Settings » Technical » IAP Accounts</strong>.
+                </li>
+                <li>Create a new IAP Account (or edit an existing one for SMS):
+                    <ul>
+                        <li><strong>Service Name:</strong> Select or type "sms".</li>
+                        <li><strong>Alternative Provider:</strong> Select the GatewayAPI provider record you just configured.</li>
+                    </ul>
+                     <div class="oe_demo oe_picture oe_screenshot" style="margin-top:15px; margin-bottom:15px;">
+                        <img src="images/placeholder.png" alt="Linking IAP Account to GatewayAPI Provider" style="max-width: 90%; border: 1px solid #ddd;">
+                        <p style="text-align:center; font-style:italic;">(Screenshot: Linking IAP Account to Provider - Replace with your actual screenshot)</p>
+                    </div>
+                </li>
+                <li>Save the IAP Account.</li>
+            </ol>
+            <p>Your Odoo instance is now configured to send SMS messages via GatewayAPI!</p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_spaced">
+    <h2 class="oe_slogan" style="color:#875A7B;">Usage</h2>
+    <div class="oe_span12">
+        <p class="oe_mt32">
+            Once configured, Odoo will use GatewayAPI for sending SMS messages through its standard SMS framework.
+            This includes:
+        </p>
+        <ul>
+            <li>Sending SMS from Contact forms.</li>
+            <li>Sending SMS via CRM lead/opportunity automation.</li>
+            <li>Using the SMS composer in various parts of Odoo.</li>
+            <li>Programmatic SMS sending from custom modules (using <code>self.env['sms.api']._send_sms(...)</code>).</li>
+        </ul>
+        <p>The module automatically handles UCS-2 encoding for messages containing emojis or special characters.</p>
+         <div class="oe_demo oe_picture oe_screenshot" style="margin-top:15px; margin-bottom:15px;">
+            <img src="images/placeholder.png" alt="Sending SMS from Odoo (e.g., SMS Composer)" style="max-width: 90%; border: 1px solid #ddd;">
+            <p style="text-align:center; font-style:italic;">(Screenshot: Sending an SMS - Replace with your actual screenshot)</p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_spaced">
+    <h2 class="oe_slogan" style="color:#875A7B;">Support & Contact</h2>
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12 text-center">
+            <p>For support, bug reports, or feature requests, please contact:</p>
+            <p><strong>Your Name / Company</strong></p>
+            <p>Email: <a href="mailto:your-support-email@example.com">your-support-email@example.com</a></p>
+            <p>Website: <a href="https://www.yourwebsite.com" target="_blank">www.yourwebsite.com</a></p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_spaced">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">Thank you for choosing our module!</h2>
+        </div>
+    </div>
+</section>

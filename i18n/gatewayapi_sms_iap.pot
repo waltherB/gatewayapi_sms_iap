@@ -1,0 +1,33 @@
+# Translation of Odoo Module.
+# This file contains the translation of the following modules:
+#  * gatewayapi_sms_iap
+# PLEASE REGENERATE THIS FILE USING ODOO'S I18N TOOLS
+# odoo-bin agettext -d gatewayapi_sms_iap -p . (run from your custom_addons folder)
+# OR
+# python /path/to/odoo/tools/i18n_tool.py --path=./gatewayapi_sms_iap --output_pot=gatewayapi_sms_iap/i18n/gatewayapi_sms_iap.pot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-28 15:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: gatewayapi_sms_iap
+#: model:ir.model.fields,field_description:gatewayapi_sms_iap.field_iap_alternative_provider__gatewayapi_account_name
+msgid "GatewayAPI Account Label"
+msgstr ""
+
+#. module: gatewayapi_sms_iap
+#: model:ir.model.fields,field_description:gatewayapi_sms_iap.field_iap_alternative_provider__gatewayapi_base_url
+msgid "GatewayAPI Base URL"
+msgstr ""
+
+# ... (add more msgid "" entries as Odoo's tool would generate them based on your code)
+# ... For now, this is just a structural placeholder.

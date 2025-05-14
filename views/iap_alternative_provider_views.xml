@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="iap_alternative_provider_view_form_inherit_gatewayapi" model="ir.ui.view">
+        <field name="name">iap.alternative.provider.form.inherit.gatewayapi</field>
+        <field name="model">iap.alternative.provider</field>
+        <field name="inherit_id" ref="iap_alternative_provider.iap_alternative_provider_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='provider_details']" position="after">
+                <group string="GatewayAPI Configuration" name="gatewayapi_config_main"
+                       attrs="{'invisible': [('provider', '!=', 'gatewayapi')]}">
+                    <group>
+                        <field name="gatewayapi_account_name"
+                               attrs="{'required': [('provider', '=', 'gatewayapi')]}"/>
+                        <field name="gatewayapi_base_url"
+                               attrs="{'required': [('provider', '=', 'gatewayapi')]}"/>
+                        <field name="gatewayapi_sender_name"
+                               attrs="{'required': [('provider', '=', 'gatewayapi')]}"/>
+                    </group>
+                    <group>
+                        <label for="gatewayapi_api_token" string="API Token"/>
+                        <div class="o_row">
+                            <field name="gatewayapi_api_token"
+                                   password="True"
+                                   attrs="{'invisible': [('gatewayapi_show_token', '=', True)], 'required': [('provider', '=', 'gatewayapi')]}"
+                                   nolabel="1"/>
+                            <field name="gatewayapi_api_token"
+                                   password="False"
+                                   attrs="{'invisible': [('gatewayapi_show_token', '=', False)], 'required': [('provider', '=', 'gatewayapi')]}"
+                                   nolabel="1"/>
+                            <button name="action_toggle_gatewayapi_token_visibility"
+                                    type="object"
+                                    icon="fa-eye"
+                                    class="btn-sm"
+                                    attrs="{'invisible': [('gatewayapi_show_token', '=', True)]}"
+                                    title="Show Token"/>
+                            <button name="action_toggle_gatewayapi_token_visibility"
+                                    type="object"
+                                    icon="fa-eye-slash"
+                                    class="btn-sm"
+                                    attrs="{'invisible': [('gatewayapi_show_token', '=', False)]}"
+                                    title="Hide Token"/>
+                        </div>
+                        <field name="gatewayapi_show_token" invisible="1"/> <!-- Helper field for attrs dependency -->
+                        <field name="gatewayapi_last_balance_check_result" widget="html" nolabel="1" colspan="2"/>
+                    </group>
+                </group>
+                <group string="Automated Balance Check & Notifications" name="gatewayapi_config_balance"
+                       attrs="{'invisible': [('provider', '!=', 'gatewayapi')]}">
+                     <group>
+                        <field name="gatewayapi_check_balance_enabled"/>
+                        <label for="gatewayapi_min_credit_limit"
+                               attrs="{'invisible': [('gatewayapi_check_balance_enabled', '=', False)]}"/>
+                        <div attrs="{'invisible': [('gatewayapi_check_balance_enabled', '=', False)]}">
+                            <field name="gatewayapi_min_credit_limit" class="oe_inline"/>
+                            <span> (Your GatewayAPI Account Currency)</span> <!-- This string is not automatically translatable, keep simple or add to .py if needed -->
+                        </div>
+                        <label for="gatewayapi_check_interval_qty"
+                               attrs="{'invisible': [('gatewayapi_check_balance_enabled', '=', False)]}"/>
+                        <div class="o_row"
+                             attrs="{'invisible': [('gatewayapi_check_balance_enabled', '=', False)]}">
+                            <field name="gatewayapi_check_interval_qty" class="oe_inline"
+                                   attrs="{'required': [('gatewayapi_check_balance_enabled', '=', True)]}"/>
+                            <field name="gatewayapi_check_interval_unit" class="oe_inline"
+                                   attrs="{'required': [('gatewayapi_check_balance_enabled', '=', True)]}"/>
+                        </div>
+                        <field name="gatewayapi_next_balance_check"
+                               attrs="{'invisible': [('gatewayapi_check_balance_enabled', '=', False)]}"/>
+                    </group>
+                    <group>
+                        <field name="gatewayapi_notify_channel_id"
+                               attrs="{'invisible': [('gatewayapi_check_balance_enabled', '=', False)]}"
+                               options="{'no_create': False, 'no_create_edit': False}"/>
+                        <field name="gatewayapi_notify_user_ids" widget="many2many_tags"
+                               attrs="{'invisible': [('gatewayapi_check_balance_enabled', '=', False)]}"
+                               options="{'no_create': True}"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="iap_alternative_provider_view_tree_inherit_gatewayapi" model="ir.ui.view">
+        <field name="name">iap.alternative.provider.tree.inherit.gatewayapi</field>
+        <field name="model">iap.alternative.provider</field>
+        <field name="inherit_id" ref="iap_alternative_provider.iap_alternative_provider_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="provider" position="after">
+                <field name="gatewayapi_account_name" optional="show"
+                       attrs="{'column_invisible': [('provider', '!=', 'gatewayapi')]}"/>
+            </field>
+        </field>
+    </record>
+</odoo>
